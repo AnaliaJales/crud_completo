@@ -16,7 +16,7 @@ class CadastroCreate(CreateView):
 
 class CadastroUpdate(UpdateView):
     model = Cadastro
-    fields = 'nome', 'data_de_nacimento', 'email', 'telefone', 'foto'
+    fields = 'nome', 'data_de_nascimento', 'email', 'telefone', 'foto'
     success_url = reverse_lazy('app:cadastro_list')
 
 class CadastroDetail(DetailView):
