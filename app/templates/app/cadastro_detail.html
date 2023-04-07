@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</link>
+</head>
+<body>
+    <div style="text-align:center;width: 50%; margin-left: 25%" class="container">
+        <br>
+        <input type="submit" onclick=location.href='{% url 'app:cadastro_list' %}' value="Voltar para a lista">
+        <br /><br>
+        <table class="table table-bordered table-striped" >
+            <fieldset>
+                <tr>
+                    <td>Nome:</td>
+                    <td>{{ object.nome }}</td>
+                </tr>
+                <tr>
+                    <td>Data de Nascimento:</td>
+                    <td>{{ object.data_de_nascimento }}</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>{{ object.email }}</td>
+                </tr>
+                <tr>
+                    <td>Telefone:</td>
+                    <td>{{ object.telefone }}</td>
+                </tr>
+                <tr>
+                    <td>CPF:</td>
+                    <td>{{ object.cpf }}</td>
+                </tr>
+                <tr>
+                    <td>Criado em:</td>
+                    <td>{{ object.data_de_cadastro }}</td>
+                </tr>
+                <tr>
+                    <td>Alterado em:</td>
+                    <td>{{ object.data_de_alteracao }}</td>
+                </tr>
+                <tr>
+                    <td>Foto:</td>
+                    <td><img src="/media/{{ object.foto }}" width="200" height="150"></td>
+                </tr>
+
+            </fieldset>
+        </table>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
